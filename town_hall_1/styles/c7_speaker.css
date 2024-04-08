@@ -45,11 +45,44 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-/* the styles for the main content */
-main {
-	clear: left;
+#nav_menu ul{
+	list-style-type: none;
+	padding: 0;
+	position: relative;
 }
-
+#nav_menu ul li{
+	float: left;
+}
+#nav_menu ul li a{
+	text-align: center;
+	display: block;
+	width: 160px;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu ul li a.current {color: yellow;}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+#nav_menu ul ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li{
+	float: none;
+}
+#nav_menu ul li:hover > ul{
+	display: block;
+}
+#nav_menu > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
 /* the styles for the section */
 section {
 	width: 525px;
@@ -57,10 +90,15 @@ section {
 	padding: 0 20px 20px 20px;
 }
 section h1 {
-	color: #800000;
 	font-size: 150%;
-	padding-top: .5em;
+	padding: .5em 0 .25em 0;
 	margin: 0;
+	color:#800000
+}
+section h2 {
+	color: black;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
 }
 section p {
 	padding-bottom: .5em;
@@ -81,8 +119,11 @@ article {
 	padding: .5em 0;
 }
 article h2 {
-	font-size: 115%;
-	padding: 0 0 .25em 0;
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
 }
 article img {
 	float: right;
@@ -101,7 +142,6 @@ aside h2 {
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
-
 aside h3 {
 	font-size: 105%;
 	padding-bottom: .25em;
